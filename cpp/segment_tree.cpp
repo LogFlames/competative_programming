@@ -4,9 +4,10 @@ struct Tree {
     int (*fnPtr)(int, int);
     std::vector<int> s;
     int n;
-    Tree(int n, int unit, int (*fnPtr)(int, int)) : fnPtr(fnPtr), s(2 * n, unit), n(n) {}
+    int unit;
+    Tree(int n, int unit, int (*fnPtr)(int, int)) : fnPtr(fnPtr), s(2 * n, unit), unit(unit), n(n) {}
     Tree(int n, int unit, std::vector<int> A, int (*fnPtr)(int, int))
-        : fnPtr(fnPtr), s(2 * n, unit), n(n) {
+        : fnPtr(fnPtr), s(2 * n, unit), unit(unit), n(n) {
         for(int i = 0; i < A.size(); i++) {
             s[i + n] = A[i];
         }
