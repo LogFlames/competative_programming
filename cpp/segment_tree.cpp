@@ -4,20 +4,20 @@ struct Tree {
     int (*fnPtr)(int, int);
     std::vector<int> s;
     int n;
-    Tree(int n, int (*fnPtr)(int, int)) : fnPtr(fnPtr), s(2 * n, 0), n(n) {}
-    Tree(int n, std::vector<int> A, int (*fnPtr)(int, int))
-        : fnPtr(fnPtr), s(2 * n), n(n) {
+    Tree(int n, int unit, int (*fnPtr)(int, int)) : fnPtr(fnPtr), s(2 * n, unit), n(n) {}
+    Tree(int n, int unit, std::vector<int> A, int (*fnPtr)(int, int))
+        : fnPtr(fnPtr), s(2 * n, unit), n(n) {
         for(int i = 0; i < A.size(); i++) {
             s[i + n] = A[i];
         }
-        for (int i = n - 1; i >= 0; i--) {
+        for (int i = n - 1; i > 0; i--) {
             s[i] = (*fnPtr)(s[i * 2], s[i * 2 + i]);
         }
     }
     void update(int i, int v) {
         int ind = i + n;
         s[ind] = v;
-        while (ind != 0) {
+        while (ind > 1) {
             ind /= 2;
             s[ind] = (*fnPtr)(s[ind * 2], s[ind * 2 + 1]);
         }
