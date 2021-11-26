@@ -24,7 +24,7 @@ struct Tree {
         }
     }
     int query(int l, int r) {
-        int sl = 0, sr = 0;
+        int sl = unit, sr = unit;
         for(l += n, r += n; l < r; l >>= 1, r >>= 1) {
             if (l % 2 == 1) sl = (*fnPtr)(sl, s[l++]);
             if (r % 2 == 1) sr = (*fnPtr)(sr, s[--r]);
