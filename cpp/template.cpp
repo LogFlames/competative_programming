@@ -29,6 +29,8 @@ typedef vector<vector<ll>> vvl;
 typedef vector<bool> vb;
 typedef vector<vector<bool>> vvb;
 typedef vector<pair<int, int>> vpii;
+typedef vector<string> vs;
+typedef vector<vector<string>> vvs;
 
 void fast() {
     ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
