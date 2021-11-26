@@ -12,7 +12,7 @@ struct Tree {
             s[i + n] = A[i];
         }
         for (int i = n - 1; i > 0; i--) {
-            s[i] = (*fnPtr)(s[i * 2], s[i * 2 + i]);
+            s[i] = (*fnPtr)(s[i * 2], s[i * 2 + 1]);
         }
     }
     void update(int i, int v) {
