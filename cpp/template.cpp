@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <queue>
 using namespace std;
 
 #define rep(i, a, b) for (int i = a; i < (b); ++i)
@@ -14,7 +15,11 @@ using namespace std;
 #define gtz(a, b) ((a) > 0 ? (b) : 0)
 #define pb push_back
 #define un_map unordered_map
+#define mmap multimap
+#define un_mmap unordered_multimap
 #define un_set unordered_set
+#define mset multiset
+#define un_mset unordered_multiset
 #define F first
 #define S second
 
@@ -35,6 +40,8 @@ typedef vector<pair<int, int>> vpii;
 typedef vector<pair<ll, ll>> vpll;
 typedef vector<string> vs;
 typedef vector<vector<string>> vvs;
+typedef priority_queue<int> pqi;
+typedef priority_queue<ll> pql;
 
 void fast() {
     ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
