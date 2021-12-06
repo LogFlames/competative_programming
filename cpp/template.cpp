@@ -12,6 +12,8 @@ using namespace std;
 #define debv(a) cout << #a << ": [ "; trav(i,(a)) { cout << i << " "; } cout << "]" << endl
 #define prt(a) cout << a << endl
 #define gtz(a, b) ((a) > 0 ? (b) : 0)
+#define amin(a, b) a = min((a), (b))
+#define amax(a, b) b = max((a), (b))
 #define pb push_back
 #define un_map unordered_map
 #define mmap multimap
@@ -44,6 +46,10 @@ typedef priority_queue<ll> pql;
 
 void fast() {
     ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
+}
+
+void solve() {
+
 }
 
 int main() {
