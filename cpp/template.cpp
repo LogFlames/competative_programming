@@ -1,15 +1,25 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+#define DEBUG
+
 #define rep(i, a, b) for (int i = a; i < (b); ++i)
 #define per(i, a, b) for (int i = a - 1; i >= (b); --i)
 #define trav(a, x) for(auto& a : (x))
 #define all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
 #define sz(x) (int)(x).size()
+
+#ifdef DEBUG
 #define deb(x) cerr << #x << " = " << (x) << endl
 #define deb2(x, y) cerr << #x << " = " << (x) << ", " << #y << " = " << (y) << endl
 #define debv(a) cerr << #a << ": [ "; trav(i,(a)) { cout << i << " "; } cout << "]" << endl
+#else
+#define deb(x)
+#define deb2(x, y)
+#define debv(a)
+#endif
+
 #define prt(a) cout << a << endl
 #define gtz(a, b) ((a) > 0 ? (b) : 0)
 #define amin(a, b) a = min((a), (b))
