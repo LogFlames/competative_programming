@@ -23,7 +23,7 @@ using namespace std;
 #define prt(a) cout << a << endl
 #define gtz(a, b) ((a) > 0 ? (b) : 0)
 #define amin(a, b) a = min((a), (b))
-#define amax(a, b) b = max((a), (b))
+#define amax(a, b) a = max((a), (b))
 #define pb push_back
 #define un_map unordered_map
 #define mmap multimap
